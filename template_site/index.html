@@ -47,13 +47,24 @@ THE SOFTWARE.
      d3.json('metabolic_map.json', function(error, data) {
        if (error) console.warn(error);
        if (data) {
-          d3.json('rxn_data.json', function(error, rxn_data) { 
+          d3.csv('rxn_data.csv', function(rxn_error, rxn_data) {
+		if (rxn_error) console.warn(rxn_error)
+		console.log(data)
+		var reformatted_rxn_data = {};
+		rxn_data.forEach(function(d) {
+		        if (typeof d.Minimum != 'undefined') {
+    			   reformatted_rxn_data[d.ID] = d.Minimum
+			} else if (typeof d.Maximum != 'undefined') {
+		           reformatted_rxn_data[d.ID] = d.Maximum		
+			}
+		});
 		var options = { menu: 'all', fill_screen: true };
-                var b = escher.Builder(data, null, null, d3.select('#map_container'), options);
-                b.set_reaction_data( rxn_data )
-	  });
-       }
-     });
+		var b = escher.Builder(data, null, null, d3.select('#map_container'), options);
+		console.log(reformatted_rxn_data);
+		b.set_reaction_data(reformatted_rxn_data);
+		});
+	  }
+       }); 
     </script>
   </body>
 </html>
