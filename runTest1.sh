@@ -1,6 +1,6 @@
 #!/bin/bash
 
-app add -U wget
+apk add -U wget ca-certificates
 
 # Testing for version 0.2.x of the container
 
