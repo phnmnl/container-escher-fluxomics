@@ -12,6 +12,8 @@ ADD create_site_for_data.sh /usr/local/bin/create_site_for_data
 RUN chmod a+x /usr/local/bin/create_site_for_data
 ADD best_fit_fluxes2escher_fluxes_csv.sh /usr/local/bin/best_fit_fluxes2escher_fluxes_csv
 RUN chmod a+x /usr/local/bin/best_fit_fluxes2escher_fluxes_csv
+ADD runTest1.sh /usr/local/bin/runTest1.sh
+RUN chmod a+x /usr/local/bin/runTest1.sh
 
 ENTRYPOINT ["create_site_for_data"]
 
