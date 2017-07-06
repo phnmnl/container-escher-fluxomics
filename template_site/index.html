@@ -52,11 +52,7 @@ THE SOFTWARE.
 		console.log(data)
 		var reformatted_rxn_data = {};
 		rxn_data.forEach(function(d) {
-		        if (typeof d.Minimum != 'undefined') {
-    			   reformatted_rxn_data[d.ID] = d.Minimum
-			} else if (typeof d.Maximum != 'undefined') {
-		           reformatted_rxn_data[d.ID] = d.Maximum		
-			}
+			reformatted_rxn_data[d.ID] = d.Avg 
 		});
 		var options = { menu: 'all', fill_screen: true };
 		var b = escher.Builder(data, null, null, d3.select('#map_container'), options);
