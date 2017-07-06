@@ -3,8 +3,12 @@ FROM alpine:3.5
 MAINTAINER PhenoMeNal-H2020 Project ( phenomenal-h2020-users@googlegroups.com )
 
 LABEL software.version="1.6.0-beta.4"
-LABEL version="0.1"
+LABEL version="1.0"
 LABEL software="escher-static-viewer"
+LABEL website="https://github.com/escher/escher-demo"
+LABEL documentation="https://github.com/escher/escher-demo"
+LABEL license="https://github.com/phnmnl/container-escher-fluxomics/blob/develop/License.txt"
+LABEL tags="Metabolomics"
 
 RUN apk -U add bash gawk
 ADD template_site /opt/template_site
