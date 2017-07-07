@@ -1,65 +1,77 @@
-# Escher-fluxomics
-Version: 1.6.0-beta.4 
+# Escher Web
+![Logo](escher.png)
+Version: 1.6.0-beta.4
 
 ## Short Description
 
-Metabolic pathway visualization for fluxomics data using Escher.
+A web-based visualization tool for biological pathways. 
 
 ## Description
 
-Escher provides an interactive visualization environment for fluxomics data on top of a previously layouted metabolic map.
+Escher is a web-based tool for building, viewing, and sharing visualizations of biological pathways. These 'pathway maps' are a great way to contextualize data about metabolism. It requires manually layouted pathway maps, which can be generated with the same tool starting from an SBML input. This container only includes the standalone web version, and is tailored to produce a dynamic Escher visualization based on fluxomics results.
 
 ## Key features
 
-- Constraint-Based Modelling
-- 13C Metabolic Flux Analysis
+- Biological pathways visualization
+- Biological pathways drawing
+- Overlay data on top of biological pathways.
 
 ## Functionality
 
-- Post-processing
-- Statistical Analysis
-- Workflows 
+- Data overlay on Pathways
+
+## Approaches
+
+- Isotopic Labelling Analysis / 13C
 
 ## Screenshots
 
 
 ## Tool Authors
 
-- Zachary A. King (University of California at San Diego)
+- [Zach King, University of California at San Diego](https://github.com/zakandrewking)
 
 ## Container Contributors
 
-- [Pablo Moreno](https://github.com/pcm32) 
+- [Pablo Moreno, EMBL-EBI](https://github.com/pcm32) 
 
 ## Website
 
-- http://escher.readthedocs.io/en/stable/ 
-
+- https://escher.github.io/
+- http://escher.readthedocs.io/
 
 ## Git Repository
 
 - https://github.com/escher/escher-demo
 
-## Installation 
+## Installation
 
-This tool is preloaded in PhenoMeNal Galaxy deployments.
+This tool is available by default in all PhenoMeNal Cloud Research Environments (CRE), inside Galaxy. No installation is required when using a CRE or a local deployment of PhenoMeNal.
 
-For local individual installation:
+For advanced docker usage:
 
-```bash
-docker pull container-registry.phenomenal-h2020.eu/phnmnl/mzml2isa
+- Go to the directory where the dockerfile is.
+- Create container from dockerfile:
+
 ```
+docker build -t escher-fluxomics .
+```
+
+Alternatively, pull from repo:
+
+```
+docker pull container-registry.phenomenal-h2020.eu/phnmnl/escher-fluxomics
+```
+
 
 ## Usage Instructions
 
-Available on PhenoMeNal Galaxy instances under PhenoMeNal H2020 Tools -> Fluxomics.
+The tool is available on each deployed PhenoMeNal Cloud Reseach Environment, inside the Galaxy instance. On the left side tool panel, this is within PhenoMeNal H2020 Tools section, Fluxomics, escher-fluxomics. The tool requires as input a previously layouted map (which can be done with Escher, directions to be added) and the file `Best fit fluxes` produced by Iso2flux or by Isodyn.
 
-For direct docker usage:
 
-```bash
-docker run -v $PWD:/data container-registry.phenomenal-h2020.eu/phnmnl/mzml2isa -i /data/mzml_files/ -o /data/out_folder/ -s name_of_study
+Through docker
+
+```
+docker run -it -v $PWD:/data container-registry.phenomenal-h2020.eu/phnmnl/escher-fluxomics ...
 ```
 
-## Publications
-
-- King ZA, Dräger A, Ebrahim A, Sonnenschein N, Lewis NE, Palsson BO (2015) Escher: A Web Application for Building, Sharing, and Embedding Data-Rich Visualizations of Biological Pathways. PLoS Comput Biol 11(8): e1004321. https://doi.org/10.1371/journal.pcbi.1004321
