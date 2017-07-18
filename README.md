@@ -1,5 +1,5 @@
-# Escher Web
 ![Logo](escher.png)
+# Escher Web
 Version: 1.6.0-beta.4
 
 ## Short Description
@@ -74,4 +74,5 @@ Through docker
 ```
 docker run -it -v $PWD:/data container-registry.phenomenal-h2020.eu/phnmnl/escher-fluxomics ...
 ```
+## Publications
 
