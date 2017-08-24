@@ -26,6 +26,7 @@ Escher is a web-based tool for building, viewing, and sharing visualizations of 
 
 ## Screenshots
 
+![screenshot](screenshots/s1.png)
 
 ## Tool Authors
 
