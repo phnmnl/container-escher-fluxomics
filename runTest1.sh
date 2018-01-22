@@ -5,7 +5,7 @@ apk add -U wget ca-certificates
 # Testing for version 0.2.x of the container
 
 # Download data
-wget "https://drive.google.com/uc?export=download&id=0B7S2ZMhdzWwbT3AtdDk0S3dJaDg" -O best_fit_fluxes.csv
+wget "https://drive.google.com/uc?export=download&id=1kpn3qYV_VSS4BvC0ONNvwlfaZtGO-pzg" -O best_fit_fluxes.csv
 wget "https://drive.google.com/uc?export=download&id=0B7S2ZMhdzWwbclJPZ2lmZEFyRGs" -O map_w_layout.json
 
 best_fit_fluxes2escher_fluxes_csv best_fit_fluxes.csv best_fit_fluxes.json
