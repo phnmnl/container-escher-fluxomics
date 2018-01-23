@@ -1,9 +1,8 @@
 FROM alpine:3.5
 
-MAINTAINER PhenoMeNal-H2020 Project ( phenomenal-h2020-users@googlegroups.com )
-
+LABEL maintainer="PhenoMeNal-H2020 Project (phenomenal-h2020-users@googlegroups.com)"
 LABEL software.version="1.6.0-beta.4"
-LABEL version="1.0"
+LABEL version="1.1"
 LABEL software="escher-static-viewer"
 LABEL website="https://github.com/escher/escher-demo"
 LABEL documentation="https://github.com/escher/escher-demo"
