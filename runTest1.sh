@@ -30,7 +30,7 @@ done
 
 echo "Escher-fluxomics runs with test data without error codes for iso2flux 0.6.1, all expected files created."
 
-# Testing for version 0.6.1 or newer of the container
+# Testing for version 0.6.1 or 0.7 of the container
 
 BEST_FLUXES_JSON=best_fit_fluxes_0.6.json
 SITE=/tmp/site0.6
